@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
 // array to house the character sets used to determine where we will be pulling the unique characters from
-  var charSet = {
+  var charSets = {
     useNumbers: "0123456789",
     useSpecChars: "!@#$%^&*",
     useLowerC: "abcdefghijklmnopqrstuvwxyz",
@@ -33,16 +33,16 @@ function generatePassword() {
   var charSet = "";
   //if statements to connect that if a user used lowerC, etc and tying that back to the charSets variable
   if (useLowerC) {
-    charSet += charSet.useLowerC;
+    charSet += charSets.useLowerC;
   }
   if (useUpperC) {
-    charSet += charSet.useUpperC;
+    charSet += charSets.useUpperC;
   }
   if (useNumbers) {
-    charSet += charSet.useNumbers;
+    charSet += charSets.useNumbers;
   }
   if (useSpecChars) {
-    charSet += charSet.useSpecChars;
+    charSet += charSets.useSpecChars;
   }
   // console.log(charSet);
   var password = "";
